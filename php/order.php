@@ -4,23 +4,23 @@
 $Name = $_POST['Name'];
 $Phone = $_POST['Phone'];
 $PromoCode = $_POST['PromoCode'];
-//$Review = $_POST['Review'];
+$Review = $_POST['Review'];
 
 //обработка и преобразование данных
 $Name = htmlspecialchars($Name); //преобразование символов в сущности
 $Phone= htmlspecialchars($Phone);
 $PromoCode= htmlspecialchars($PromoCode);
-//$Review= htmlspecialchars($Review);
+$Review= htmlspecialchars($Review);
 
 $Name = urldecode($Name); //декодирование URL
 $Phone= urldecode($Phone);
 $PromoCode= urldecode($PromoCode);
-//$Review= urldecode($Review);
+$Review= urldecode($Review);
 
 $Name = trim($Name); //удаление лишних пробелов
 $Phone= trim($Phone);
 $PromoCode= trim($PromoCode);
-//$Review= trim($Review);
+$Review= trim($Review);
 
 
 if (mail("romanshablio@icloud.com",
@@ -28,14 +28,18 @@ if (mail("romanshablio@icloud.com",
             "Имя: ".$Name."\n".
             "Телефон: ".$Phone."\n".
             "Промо-код: ".$PromoCode."\n",
-            //"Отзыв: ".$Review."\n",
+            "Отзыв: ".$Review."\n",
             "From: promo@hitryenot.ru \r\n")
             ) {
-                header('Location: http://cs07629.tmweb.ru/'); //перенаправиление на главную страницу если все успешно
+                header('Location: ../index.html'); //перенаправиление на главную страницу если все успешно
                 
             }
             else {
                 echo('Есть ошибки, проверьте все ли обязательные поля заполнены.'); // вывод сообщения о провале если все неуспешно.
             }
+
+$mysql = new mysqli('localhost', 'cs07629_1', '3RRyVjpSrprW', 'cs07629_1');
+$mysql->query("INSERT INTO `users` (`Name`, `Phone`, `PromoCode`, `Review`) VALUES('$Name', '$Phone', '$PromoCode', '$Review')");
+$mysql->close();
 exit();
 ?>
