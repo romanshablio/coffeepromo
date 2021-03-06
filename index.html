@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	
+	<title>Бесплатный кофе</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	
+</head>
+
+
+
+	<body>
+		<div class="row-1">
+			<h1>Добро пожаловать!</h1>
+		<h3>
+			Здесь вы можете оставить свой отзыв и заработать за это чашку кофе!
+		</h3>
+		<h5>
+			Всё что вам нужно сделать - это оставить отзыв.
+		</h5>
+	
+	</div>
+	<div class="row-3">
+		<h3>
+			Инструкция: 
+		</h3>
+		<h5>
+			1. Сгенерируйте уникальный промо-код. <br>
+			2. Оставьте свой отзыв. <br>
+			3. Заполните все поля и нажмите кнопку "отправить". <br>
+			4. Приходите за своим бесплатным <br> кофе за отзыв!
+		</h5>
+	</div>
+
+	<div class="row-2">
+		<button  class="btn-1" onclick="generatePassword()">Создать код</button>
+        <!--выводим сгенерированный пароль -->
+        <p>Ваш пароль:</p>
+        <div id="pass_text" style="font-weight: bold"></div>
+	</div>
+		
+		<form action="php/order.php" method="POST">
+			<div class="row">
+				
+				
+				<div class="col-lg-6">
+					<input type="text" name="Name" placeholder="Имя" required>
+				</div>
+				<div class="col-lg-6">
+					<input type="text" name="Phone" placeholder="Телефон" required>
+				</div>
+				<div class="col-lg-4">
+					<input type="text" name="PromoCode" placeholder="Уникальный код" required>
+				</div>
+				<!--<div class="col-12">
+					<input style="width: 550px; height: 200px;" type="text" name="Review" placeholder="Ваш отзыв" required>
+				</div>-->
+				
+			</div>
+		
+		
+			<div class="gradient-wrap">
+				<input class="gradient-btn" type="submit" name="Отправить">
+			</div>
+		</form>
+	
+
+		<script>
+			function generatePassword() {
+		var length = 8,
+			charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
+			retVal = "";
+		for (var i = 0, n = charset.length; i < length; ++i) {
+			retVal += charset.charAt(Math.floor(Math.random() * n));
+			document.getElementById('pass_text').innerHTML = retVal;
+		}
+		return retVal;
+	}
+	
+		</script>
+	</body>
+
+</html>
+
