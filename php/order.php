@@ -38,8 +38,8 @@ if (mail("romanshablio@icloud.com",
                 echo('Есть ошибки, проверьте все ли обязательные поля заполнены.'); // вывод сообщения о провале если все неуспешно.
             }
 
-$mysql = new mysqli('localhost', 'cs07629_1', '3RRyVjpSrprW', 'cs07629_1');
-$mysql->query("INSERT INTO `users` (`Name`, `Phone`, `PromoCode`, `Review`) VALUES('$Name', '$Phone', '$PromoCode', '$Review')");
-$mysql->close();
+$mysql = new mysqli('localhost', 'cs07629_1', '3RRyVjpSrprW', 'cs07629_1'); //задает подключение в БД 1 параметр - хост, 2 - логин, 3 - пароль, 4 - название БД
+$mysql->query("INSERT INTO `users` (`Name`, `Phone`, `PromoCode`, `Review`) VALUES('$Name', '$Phone', '$PromoCode', '$Review')"); //создаю запрос на добавление данных в таблицу users значениями из полей.
+$mysql->close(); //завершение выполнения функции. 
 exit();
 ?>
