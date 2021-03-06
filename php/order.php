@@ -31,19 +31,11 @@ if (mail("romanshablio@icloud.com",
             //"Отзыв: ".$Review."\n",
             "From: promo@hitryenot.ru \r\n")
             ) {
-                echo ('Ваше сообщение успешно отправлено! Возвращайтесь за бесплатным кофе!');
+                header('Location: http://cs07629.tmweb.ru/'); //перенаправиление на главную страницу
                 
             }
             else {
                 echo('Есть ошибки, проверьте все ли обязательные поля заполнены.');
             }
+exit();
 ?>
-<style>
-    *{
-      
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to left, #1366ff, #ff0b6d);
-
-    }
-</style>
