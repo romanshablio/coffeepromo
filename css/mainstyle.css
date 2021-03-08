@@ -1,0 +1,186 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+html {
+    background: linear-gradient(to left, #1366ff, #ff0b6d);
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+}
+
+h1{
+    margin-top: 5rem;
+}
+
+img {
+    max-width: 100px;
+    max-height: 100px;
+    mask-repeat: repeat-x;
+}
+
+/* Main page for users */
+
+/* Navigation */
+
+.navigation {
+    display: flex;
+    position: sticky;
+    justify-content: space-between;
+    padding: 15px;
+    background: linear-gradient(to left, #aec0e4, #eda4c1);
+    padding-inline-end: 40px;
+    padding-inline-start: 40px;
+    margin-block-start: 0;
+    box-shadow: 0 5px 20px purple;
+}
+
+.nav-item {    
+    padding: 5px;
+    border-radius: 60px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    border-width: 0.1px;
+    box-shadow: 0 5px 20px rgba(0,0,0, .5);
+    background: linear-gradient(to left, #0a43acb6, #a20544bd);
+}
+
+.nav-item a{
+    text-align: center;
+    color: #fff;
+    transition: .5s;
+    background-color: linear-gradient(to left, #1366ff, #ff0b6d);
+}
+
+.container {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+/* Main info for users */
+
+.main-info {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.bg {
+    width: -webkit-fill-available;
+    padding: 20px;
+    margin-bottom: 10px;
+    font-size: xx-large;
+    font-weight: 500;
+    font-family:'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    font-style: oblique;
+    background-image: url('../img/beans.png');
+    background-size: 100px;
+    background-repeat: repeat-x;
+}
+
+.btn-1{
+    color: lavender;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 40px;
+    border-width: 1px;
+    background: none;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.693);
+}
+
+.row {
+    padding: 10px;
+    text-align: center;
+    border-radius: 40px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.693);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+input {
+    border-radius: 30px;
+    width: 250px;
+    height: 30px;
+    text-align: center;
+    background: none;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.693);
+}
+
+input::placeholder {
+    color: lavender;
+    
+}
+
+.col {
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0 5px 20px rgba(102, 76, 76, 0.015);
+}
+
+.gradient-wrap button {
+    color: lavender;
+    margin-bottom: 30px;
+    border-radius: 30px;
+    width: 250px;
+    height: 30px;
+    text-align: center;
+    background: none;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.693);
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 25px;
+    background: rgba(32 175 147 / 30%);
+    background-image: url("../img/beans.png");
+    background-size: 100px;
+    
+}
+
+.footer a, p {
+    text-shadow: lightgreen;
+    color: lightcyan;
+    text-decoration: none;
+    padding: 5px;
+    text-align: center;
+    font-weight: 300;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.forAdmin {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 9rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+figure {
+    text-align: center;
+}
+
+.load img {
+    max-width: 100%;
+    max-height: 100%;
+}
