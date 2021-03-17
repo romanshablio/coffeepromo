@@ -48,18 +48,62 @@
             <h5>2. Заполни все формы и оставь свой отзыв о работе бариста и качестве напитков.</h5>
             <div class="row">
               <div class="col">
-                <input type="text" name="Name" placeholder="Имя" required>
+                <label class="label-str" for="name">Ваше имя: </label>
+                <input type="text" name="Name" id="name" required>
               </div>
               <div class="col">
-                <input type="text" name="Phone" placeholder="Телефон с 8 (ХХХ)" maxlength="11" pattern="[0-9]{,11}" required>
+                <label class="label-str" for="tel">Ваш номер телефона: </label>
+                <input type="tel" name="Phone" id="tel" minlength="11" pattern="[0-9]{,11}" required>
               </div>
               <div class="col">
-                <input class="promocode" type="text" name="PromoCode" placeholder="Уникальный код" required>
+                <label class="label-str" for="code">Только что полученный промо-код: </label>
+                <input class="promocode" type="text" name="PromoCode" id="code" required>
+              </div>
+              <div class="col col-rating">
+                <label for="">Оцените пожалуйста доброжелательность бариста: </label>
+                <div class="rating">
+                  <input type="radio" id="star5" name="GoodnessRating" value="5" required /><label for="star5" title="Замечательно!">5 </label>
+                  <input type="radio" id="star4" name="GoodnessRating" value="4" /><label for="star4" title="Хорошо">4 </label>
+                  <input type="radio" id="star3" name="GoodnessRating" value="3" /><label for="star3" title="Нормально">3 </label>
+                  <input type="radio" id="star2" name="GoodnessRating" value="2" /><label for="star2" title="Плохо">2 </label>
+                  <input type="radio" id="star1" name="GoodnessRating" value="1" /><label for="star1" title="Ужасно">1 </label>
+                </div>
+              </div>
+              <div class="col col-rating">
+                <label for="">Оцените пожалуйста скорость обслуживания: </label>
+                <div class="rating">
+                  <input type="radio" id="star52" name="SpeedRating" value="5" required /><label for="star52" title="Замечательно!">5 </label>
+                  <input type="radio" id="star42" name="SpeedRating" value="4" /><label for="star42" title="Хорошо">4 </label>
+                  <input type="radio" id="star32" name="SpeedRating" value="3" /><label for="star32" title="Нормально">3 </label>
+                  <input type="radio" id="star22" name="SpeedRating" value="2" /><label for="star22" title="Плохо">2 </label>
+                  <input type="radio" id="star12" name="SpeedRating" value="1" /><label for="star12" title="Ужасно">1 </label>
+                </div>
+              </div>
+              <div class="col col-rating">
+                <label for="">Оцените пожалуйста качество продукции: </label>
+                <div class="rating">
+                  <input type="radio" id="star53" name="ProductQuality" value="5" required /><label for="star53" title="Замечательно!">5 </label>
+                  <input type="radio" id="star43" name="ProductQuality" value="4" /><label for="star43" title="Хорошо">4 </label>
+                  <input type="radio" id="star33" name="ProductQuality" value="3" /><label for="star33" title="Нормально">3 </label>
+                  <input type="radio" id="star23" name="ProductQuality" value="2" /><label for="star23" title="Плохо">2 </label>
+                  <input type="radio" id="star13" name="ProductQuality" value="1" /><label for="star13" title="Ужасно">1 </label>
+                </div>
+              </div>
+              <div class="col col-rating">
+                <label for="">Оцените пожалуйста чистоту заведения: </label>
+                <div class="rating">
+                  <input type="radio" id="star54" name="Сleanliness" value="5" required /><label for="star54" title="Замечательно!">5 </label>
+                  <input type="radio" id="star44" name="Сleanliness" value="4" /><label for="star44" title="Хорошо">4 </label>
+                  <input type="radio" id="star34" name="Сleanliness" value="3" /><label for="star34" title="Нормально">3 </label>
+                  <input type="radio" id="star24" name="Сleanliness" value="2" /><label for="star24" title="Плохо">2 </label>
+                  <input type="radio" id="star14" name="Сleanliness" value="1" /><label for="star14" title="Ужасно">1 </label>
+                </div>
               </div>
               <div class="col">
-                <input type="text" name="Review" placeholder="Ваш отзыв" required>
-              </div>
-              
+                <label class="label-str" for="review">Ваш отзыв: </label>
+                <textarea name="Review" id="review" cols="30" rows="10"></textarea>
+                <!--<input type="text" name="Review" id="review">-->
+              </div>              
             </div>         
             <h5>3. Нажми кнопку "отправить" и приходи за своим кофе!</h5>
             <div class="gradient-wrap">
@@ -90,3 +134,4 @@
   </script>
 </body>
 </html>
+
