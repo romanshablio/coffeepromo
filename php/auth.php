@@ -37,12 +37,12 @@ if($_COOKIE['user'] == ''){
     header('Location: ../index.html');
 }
 else {
-    header('Location: ../authed_admin.html');
+    header('Location: ../authed_admin.php');
 }
 
 $mysql->close(); //завершение выполнения функции. 
 
-header('Location: ../authed_admin.html');
+header('Location: ../authed_admin.php');
 
 exit();
 ?>

@@ -27,7 +27,7 @@
 				Вы авторизованный пользователь!
 			</h1>
 		</div>
-    <form action="php/get.php" method="POST">
+    <form class="authorized" action="php/get.php" method="POST">
 
       <div class="gradient-wrap">
         <button class="gradient-btn" type="submit">Загрузить данные</button>
